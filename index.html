@@ -354,7 +354,6 @@
             <i class="fas fa-recycle"></i> Borla Tracker
         </div>
         <div class="header-links">
-            <a href="https://github.com/Kyei-Ernest" target="_blank"><i class="fab fa-github"></i> GitHub</a>
             <a href="https://kyei-ernest.github.io/wms/documentation/index.html" target="_blank" class="btn btn-outline" style="padding: 5px 15px; margin-left: 15px;">API Docs</a>
         </div>
         <div class="menu-toggle" id="menuToggle">
@@ -369,6 +368,7 @@
             <li><a href="#home" class="active">Introduction</a></li>
             <li><a href="#team">Project Team</a></li>
             <li><a href="#problem-context">Problem Context</a></li>
+            <li><a href="#research">Research & Methodology</a></li>
         </ul>
         
         <div class="sidebar-section-title">System Design</div>
@@ -376,6 +376,7 @@
             <li><a href="#actors">System Actors</a></li>
             <li><a href="#requirements">Requirements (SRS)</a></li>
             <li><a href="#architecture">Architecture & Stack</a></li>
+            <li><a href="#system-workflow">System Workflow</a></li>
         </ul>
 
         <div class="sidebar-section-title">Technical Specs</div>
@@ -401,7 +402,7 @@
             <p class="lead">A digital transformation initiative designed to bridge the gap between waste producers and collectors in Ghana.</p>
             
             <div style="background: var(--secondary-color); padding: 20px; border-radius: 8px; border-left: 4px solid var(--primary-color);">
-                <strong>Executive Summary:</strong> The project delivers a multi-platform ecosystem: a <b>Flutter-based mobile application</b> for clients and collectors, and a <b>React + TypeScript web dashboard</b> for operational oversight. Backed by a robust Django/PostGIS API, the system automates assignment, standardizes pricing, and digitizes payments.
+                <strong>Executive Summary:</strong> The project delivers a multi-platform ecosystem: a <b>Flutter-based mobile application</b> for clients and collectors, and a <b>React + TypeScript web dashboard</b> for operational oversight. Backed by a robust Django/PostGIS API, the system automates assignment, standardizes pricing, and digitizes payments. The solution targets a 95% on-time pickup rate and aims to integrate the informal sector (freelance riders) into a formal economy.
             </div>
             
             <div style="margin-top: 20px;">
@@ -452,14 +453,14 @@
         <!-- Problem Context -->
         <section id="problem-context">
             <h2>Introduction & Problem Context</h2>
-            <p>Ghana’s waste management sector struggles with rapid urbanization, generating approximately <b>12,710 tonnes</b> of solid waste daily, with a collection deficit of nearly 40%.</p>
+            <p>Ghana’s waste management sector struggles with rapid urbanization, generating approximately <b>12,710 tonnes</b> of solid waste daily, with a collection deficit of nearly 40%. In cities like Accra and Kumasi, the "Communal Container Collection" (CCC) system is often overwhelmed. Private sector involvement, pioneered by Zoomlion, utilizes tricycle operators to navigate narrow streets, but these operations lack central coordination.</p>
             
             <h3>The Problem</h3>
-            <p>The absence of a unified digital platform connecting households to waste collectors results in:</p>
+            <p>The absence of a unified digital platform connecting households to waste collectors results in inefficient routing, opaque pricing, and a lack of accountability.</p>
             <ul>
                 <li><b>Operational Invisibility:</b> Supervisors cannot track where collectors are in real-time.</li>
                 <li><b>Revenue Leakage:</b> Cash-based transactions result in financial discrepancies.</li>
-                <li><b>Service Inequity:</b> Low-income zones suffer from irregular pickups due to lack of data.</li>
+                <li><b>Service Inequity:</b> Low-income zones suffer from irregular pickups due to lack of data-driven scheduling.</li>
             </ul>
 
             <h3>Project Objectives</h3>
@@ -467,17 +468,50 @@
                 <div class="card">
                     <i class="fas fa-mobile-alt" style="color: var(--primary-color); font-size: 20px;"></i>
                     <h4>Digital Integration</h4>
-                    <p>Create a seamless interface for Clients to request services and Collectors to receive geo-optimized tasks.</p>
+                    <p>To create a seamless interface for Clients to request services and Collectors to receive geo-optimized tasks.</p>
                 </div>
                 <div class="card">
                     <i class="fas fa-balance-scale" style="color: var(--primary-color); font-size: 20px;"></i>
                     <h4>Standardization</h4>
-                    <p>Implement an automated pricing engine based on waste type (Hazardous, Plastic, General).</p>
+                    <p>To implement an automated pricing engine that calculates fees based on waste type (Hazardous, Plastic, General) and zone density.</p>
                 </div>
                 <div class="card">
                     <i class="fas fa-chart-line" style="color: var(--primary-color); font-size: 20px;"></i>
                     <h4>Optimization</h4>
-                    <p>Reduce operational coordination overhead by 40% through automated dispatching.</p>
+                    <p>To reduce operational coordination overhead by 40% through automated dispatching.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-users-cog" style="color: var(--primary-color); font-size: 20px;"></i>
+                    <h4>Formalization</h4>
+                    <p>To provide a mechanism for independent tricycle operators to be recruited and verified by licensed companies.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research & Methodology -->
+        <section id="research">
+            <h2>Research & Methodology</h2>
+            
+            <h3>3.1 Research Approach</h3>
+            <p>The team adopted a <b>User-Centric Design</b> approach, utilizing:</p>
+            <ul>
+                <li><b>Stakeholder Interviews:</b> Engaged with local tricycle riders to understand their navigation and payment pain points.</li>
+                <li><b>Competitor Analysis:</b> Evaluated existing manual dispatch methods used by local assemblies.</li>
+            </ul>
+
+            <h3>3.2 Root Cause Analysis</h3>
+            <div class="card-grid">
+                <div class="card">
+                    <h4>Root Cause 1</h4>
+                    <p><b>Manual Dispatching:</b> Supervisors rely on phone calls to assign tasks, leading to delays.</p>
+                </div>
+                <div class="card">
+                    <h4>Root Cause 2</h4>
+                    <p><b>Lack of Trust:</b> Clients are hesitant to pay upfront due to a history of missed pickups.</p>
+                </div>
+                <div class="card">
+                    <h4>Root Cause 3</h4>
+                    <p><b>Fragmented Workforce:</b> Thousands of willing collectors exist but have no platform to advertise their availability.</p>
                 </div>
             </div>
         </section>
@@ -485,6 +519,7 @@
         <!-- Actors -->
         <section id="actors">
             <h2>System Actors & Roles</h2>
+            <p>The platform distinguishes between <b>Operational Actors</b> (Mobile) and <b>Administrative Actors</b> (Web).</p>
             
             <h3>📱 Operational Actors (Mobile)</h3>
             <table>
@@ -495,12 +530,12 @@
                 </tr>
                 <tr>
                     <td><b>Client</b></td>
-                    <td>Waste Producer (Household)</td>
+                    <td>Waste Producer</td>
                     <td>Subscription management, On-Demand booking, Digital payment.</td>
                 </tr>
                 <tr>
                     <td><b>Collector</b></td>
-                    <td>Field Agent (Driver)</td>
+                    <td>Field Agent (Tricycle/Truck)</td>
                     <td>Job acceptance, Route navigation, Evidence upload (Before/After photos).</td>
                 </tr>
             </table>
@@ -515,79 +550,126 @@
                 <tr>
                     <td><b>Supervisor</b></td>
                     <td>Zone Manager</td>
-                    <td>Route monitoring, Complaint resolution, Fleet performance review.</td>
+                    <td>Operational overseer for a specific geofenced zone. Route monitoring, Complaint resolution.</td>
                 </tr>
                 <tr>
                     <td><b>Company Admin</b></td>
                     <td>Organization Owner</td>
                     <td>Recruitment of collectors, Zone creation (Polygon mapping), Revenue analysis.</td>
                 </tr>
-                <tr>
-                    <td><b>Super Admin</b></td>
-                    <td>System Maintainer</td>
-                    <td>Global pricing configuration, System health monitoring.</td>
-                </tr>
             </table>
         </section>
 
         <!-- Requirements -->
         <section id="requirements">
-            <h2>System Requirements (SRS)</h2>
+            <h2>System Requirements Specification (SRS)</h2>
+            <p>Functional requirements broken down by module.</p>
             
-            <h3>Functional Modules</h3>
-            <div class="card-grid">
-                <div class="card">
-                    <h4>🔐 Auth & Security</h4>
-                    <ul>
-                        <li><b>JWT:</b> Secure, stateless authentication.</li>
-                        <li><b>RBAC:</b> Strict role separation for API endpoints.</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h4>🚛 Operations</h4>
-                    <ul>
-                        <li><b>Geospatial Assignment:</b> Assign requests to nearest collector.</li>
-                        <li><b>Evidence Locking:</b> Must upload "Before/After" photos to complete.</li>
-                        <li><b>Proximity:</b> Must be within 100m to close ticket.</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h4>💳 Payments</h4>
-                    <ul>
-                        <li><b>Gateways:</b> Mobile Money & Card (Paystack).</li>
-                        <li><b>Splitting:</b> Auto-split revenue between Platform, Company, and Collector.</li>
-                    </ul>
-                </div>
-            </div>
+            <h3>Module A: Authentication & Security</h3>
+            <ul>
+                <li><b>FR-AUTH-01:</b> System must use JWT (JSON Web Tokens) for secure, stateless authentication across mobile and web.</li>
+                <li><b>FR-AUTH-02:</b> Role-Based Access Control (RBAC) must strictly segregate Client, Collector, and Admin API endpoints.</li>
+            </ul>
+
+            <h3>Module B: Collector Recruitment (Discovery)</h3>
+            <ul>
+                <li><b>FR-DISC-01:</b> Independent collectors must be able to search for registered companies within their GPS zone.</li>
+                <li><b>FR-DISC-02:</b> The mobile app must allow document uploads (Driver’s License, Vehicle Registration) for vetting.</li>
+                <li><b>FR-DISC-03:</b> Company Admins must have a "Talent Pool" interface to approve/reject applications and onboard drivers.</li>
+            </ul>
+
+            <h3>Module C: Service Operations</h3>
+            <ul>
+                <li><b>FR-OPS-01: Geospatial Assignment:</b> The backend must assign requests to the nearest available collector within the same geofence.</li>
+                <li><b>FR-OPS-02: Evidence Locking:</b> Tasks cannot be marked "Complete" without uploading "Before" and "After" images.</li>
+                <li><b>FR-OPS-03: Proximity Validation:</b> Collectors must be within 100 meters of the pickup coordinates to close a ticket.</li>
+            </ul>
+
+            <h3>Module D: Payments</h3>
+            <ul>
+                <li><b>FR-PAY-01:</b> Integration with Mobile Money (MTN/Telecel) and Credit Cards via a secure gateway (e.g., Paystack).</li>
+                <li><b>FR-PAY-02:</b> Automated revenue splitting between the Platform, Company, and Collector.</li>
+            </ul>
 
             <h3>Non-Functional Requirements</h3>
             <ul>
-                <li><b>Performance:</b> API response < 200ms.</li>
-                <li><b>Availability:</b> 99.5% uptime target.</li>
-                <li><b>Scalability:</b> Kubernetes scaling for 10,000+ users.</li>
-                <li><b>Data Integrity:</b> Automated PostgreSQL backups.</li>
+                <li><b>Performance:</b> The API must respond to task queries in &lt;200ms to ensure fluidity on 3G networks.</li>
+                <li><b>Availability:</b> 99.5% uptime target to support daily operations.</li>
+                <li><b>Scalability:</b> Horizontal scaling via Kubernetes to support up to 10,000 concurrent users.</li>
+                <li><b>Data Integrity:</b> Daily automated backups of PostgreSQL databases.</li>
             </ul>
         </section>
 
         <!-- Architecture -->
         <section id="architecture">
-            <h2>Architecture & Technology Stack</h2>
-            <p>The system employs a Microservices-ready Layered Architecture.</p>
-
-            <h3>Tech Stack</h3>
-            <div style="margin-bottom: 20px;">
-                <span class="badge badge-flutter">Flutter (Mobile)</span>
-                <span class="badge badge-react">React + TypeScript (Web)</span>
-                <span class="badge badge-django">Django REST Framework</span>
-                <span class="badge badge-postgres">PostgreSQL + PostGIS</span>
-                <span class="badge badge-postgres">Redis + Celery</span>
+            <h2>System Architecture & Technology Stack</h2>
+            
+            <h3>6.1 Architectural Design</h3>
+            <p>The system employs a <b>Microservices-ready Layered Architecture</b>:</p>
+            <div class="card-grid">
+                <div class="card">
+                    <h4>Presentation Layer</h4>
+                    <p>Cross-platform Mobile Apps and a Responsive Web Dashboard.</p>
+                </div>
+                <div class="card">
+                    <h4>Application Layer</h4>
+                    <p>A Django REST Framework (DRF) API Gateway handling business logic, with Celery workers for background tasks (e.g., generating weekly schedules).</p>
+                </div>
+                <div class="card">
+                    <h4>Data Layer</h4>
+                    <p>PostgreSQL (Relational Data) + PostGIS (Spatial Data) + Redis (Caching).</p>
+                </div>
             </div>
 
-            <div class="card">
-                <h4>Why this stack?</h4>
-                <p><b>Mobile (Flutter):</b> Compiles to native ARM code for superior performance in GPS-heavy tasks compared to hybrid wrappers.</p>
-                <p><b>Web (React + TS):</b> Component-based structure ideal for complex dashboards with Type Safety.</p>
-                <p><b>Backend (Django + PostGIS):</b> Industry standard for handling complex geospatial queries (e.g., "Find points inside this polygon").</p>
+            <h3 style="margin-top: 30px;">6.2 Tech Stack Justification</h3>
+            <ul>
+                <li><b>Mobile (Flutter):</b> Chosen for its ability to compile to native ARM code for both iOS and Android from a single codebase, offering superior performance for GPS-heavy tasks compared to hybrid wrappers.</li>
+                <li><b>Web (React + TypeScript):</b> React provides a component-based structure ideal for complex dashboards, while TypeScript ensures type safety, reducing runtime errors in the admin portal.</li>
+                <li><b>Backend (Django + PostGIS):</b> Django offers rapid development with built-in security. PostGIS is the industry standard for handling complex geospatial queries (e.g., "Find points inside this polygon").</li>
+            </ul>
+        </section>
+        
+        <!-- System Workflow (NEW) -->
+        <section id="system-workflow">
+            <h2>System Integration & Workflow</h2>
+            <p>How the Borla Tracker ecosystem functions as a unified platform to automate waste collection.</p>
+
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <!-- Step 1 -->
+                <div style="display: flex; gap: 20px; align-items: flex-start;">
+                    <div style="background: var(--primary-color); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">1</div>
+                    <div>
+                        <h4 style="margin-top: 0;">Request Initiation (Client App)</h4>
+                        <p>A household client logs into the <b>Flutter Mobile App</b> and schedules a pickup. They select the waste type (e.g., Plastic), bin size, and date. This data is sent securely to the <b>Django Backend</b> via REST API.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div style="display: flex; gap: 20px; align-items: flex-start;">
+                    <div style="background: var(--primary-color); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">2</div>
+                    <div>
+                        <h4 style="margin-top: 0;">Intelligent Dispatch (Backend Logic)</h4>
+                        <p>The <b>Backend API</b> receives the request. Using <b>PostGIS</b>, it identifies the client's geospatial zone and automatically assigns the task to the nearest available collector operating within that polygon.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div style="display: flex; gap: 20px; align-items: flex-start;">
+                    <div style="background: var(--primary-color); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">3</div>
+                    <div>
+                        <h4 style="margin-top: 0;">Field Execution (Collector App)</h4>
+                        <p>The assigned driver receives a push notification on their <b>Collector App</b>. They accept the job and use the in-app <b>Geospatial Navigation</b> to reach the client. Upon arrival, they must upload "Before" and "After" photos to lock the evidence.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div style="display: flex; gap: 20px; align-items: flex-start;">
+                    <div style="background: var(--primary-color); color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">4</div>
+                    <div>
+                        <h4 style="margin-top: 0;">Monitoring & Payment (Web Dashboard)</h4>
+                        <p>The <b>Supervisor</b> watches this progress in real-time on the <b>React Web Dashboard</b> map. Once the job is marked complete and verified, the payment is processed, and revenue is split automatically.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -679,7 +761,7 @@
             
             <div style="margin-top: 20px;">
                 <a href="https://kyei-ernest.github.io/wms/documentation/index.html" target="_blank" class="btn">
-                    <i class="fas fa-external-link-alt"></i> View Full Swagger API Docs
+                    <i class="fas fa-external-link-alt"></i> API Reference
                 </a>
             </div>
         </section>
@@ -812,9 +894,19 @@
                 <div class="card">
                     <h4><i class="fab fa-react"></i> Web Dashboard</h4>
                     <p>React + TypeScript for Company and Admin portals.</p>
-                    <a href="#" class="btn btn-outline" style="margin-top: 10px;">Link to Web Repo</a>
+                    <a href="https://github.com/DevPhil808/garbage_tracker" target="_blank" class="btn btn-outline" style="margin-top: 10px;">View Web Repo</a>
                 </div>
             </div>
+        </section>
+
+        <!-- References (NEW) -->
+        <section id="references" style="margin-bottom: 40px; padding-top: 20px; border-top: 1px solid #eee;">
+            <h3>References</h3>
+            <ul style="color: #666; font-size: 0.95rem;">
+                <li>Group Assignment One: Applying Problem-Solving Techniques to Real-World Challenges.</li>
+                <li>Borla Tracker System Requirements Specification (v1.0).</li>
+                <li>Zoomlion Ghana Ltd. Operational Models & Challenges.</li>
+            </ul>
         </section>
 
         <footer>
